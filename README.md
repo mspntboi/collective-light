@@ -20,3 +20,5 @@ My changes done to the codebase compared to 1.01:
   - Consistent use of whitespace
   - Consistent spacing around and inside () and {}
   - Try to eliminate mixed indentation (using 4-size tabs as suggested by original sources)
+
+LET'S GO!
