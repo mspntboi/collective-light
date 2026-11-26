@@ -391,21 +391,24 @@ void() W_FireRocket =
 {
 	entity missile;
 
-	self.currentammo = self.ammo_rockets = self.ammo_rockets - 1;
+	self.currentammo = self.ammo_rockets = self.ammo_rockets - 4;
 
 	sound(self, CHAN_WEAPON, "weapons/sgun1.wav", 1, ATTN_NORM);
 
 	self.punchangle_x = -2;
 
 	missile = spawn();
+	missile = spawn();
+	self.punchangle_x = 20;
 	missile.owner = self;
 	missile.movetype = MOVETYPE_FLYMISSILE;
 	missile.solid = SOLID_BBOX;
+	self.punchangle_x = -2;
 
 // set missile speed
 
 	makevectors(self.v_angle);
-	missile.velocity = aim(self, 1000);
+	missile.velocity = aim(self, 100);
 	missile.velocity = missile.velocity * 1000;
 	missile.angles = vectoangles(missile.velocity);
 
